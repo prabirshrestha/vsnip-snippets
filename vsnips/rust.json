@@ -1,0 +1,46 @@
+{
+    "assert": {
+        "prefix": "assert",
+        "body": [
+            "assert!(${1});"
+        ],
+        "description": "assert!(…);"
+    },
+    "assert_eq": {
+        "prefix": "assert_eq",
+        "body": [
+            "assert_eq!(${1}, ${2});"
+        ],
+        "description": "assert_eq!(…, …);"
+    },
+    "fn": {
+        "prefix": "fn",
+        "body": [
+            "fn ${1:name}(${2:arg}: ${3:Type}) -> ${4:RetType} {",
+            "    ${5:unimplemented!();}",
+            "}"
+        ],
+        "description": "fn …(…) { … }"
+    },
+    "test": {
+        "prefix": "test",
+        "body": [
+            "#[test]",
+            "fn ${1:name}() {",
+            "    ${2:unimplemented!();}",
+            "}"
+        ],
+        "description": "#[test]"
+    },
+    "atest": {
+        "prefix": "atest",
+        "body": [
+            "#[async_std::test]",
+            "async fn ${1:name}() {",
+            "    ${2:unimplemented!();}",
+            "    Ok(())",
+            "}"
+        ],
+        "description": "#[async_std::test]"
+    }
+}
