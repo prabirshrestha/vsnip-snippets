@@ -1,0 +1,8 @@
+{
+    "asyncstd": {
+        "prefix": "asyncstd",
+        "body": [
+            "async-std = { version = \"1.9.0\", features = [\"attributes\"] }"
+        ]
+    }
+}
