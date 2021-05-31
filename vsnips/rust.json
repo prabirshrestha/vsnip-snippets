@@ -52,5 +52,14 @@
             "    Ok(())",
             "}"
         ]
+    },
+    "route": {
+        "prefix": "route",
+        "body": [
+            "${3:pub} async fn ${1:route}(req: Request<${2:State}>) -> tide::Result {",
+            "    ${4:let res = Response::builder(StatusCode::Ok).build();}",
+            "    Ok(res)",
+            "}"
+        ]
     }
 }
